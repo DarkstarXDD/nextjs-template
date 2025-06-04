@@ -16,7 +16,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
     "@tailwindcss/postcss": "4.1.4",
-    "@types/node": "22.14.1",
+    "@types/node": "22.15.29",
     "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "clsx": "2.1.1",
