@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
-    "@tailwindcss/postcss": "4.1.8",
+    "@tailwindcss/postcss": "4.1.10",
     "@types/node": "22.15.29",
     "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
@@ -25,7 +25,7 @@
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.12",
     "tailwind-merge": "3.3.0",
-    "tailwindcss": "4.1.8",
+    "tailwindcss": "4.1.10",
     "typescript": "5.8.3"
   }
 }
