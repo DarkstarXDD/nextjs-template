@@ -1,0 +1,13 @@
+echo "🚧 Running ESLint..."
+npx eslint
+echo "🟢 ESLint passed"
+
+echo
+
+echo "🚧 Running TypeScript check..."
+npm run type-check
+echo "🟢 TypeScript check passed"
+
+echo
+
+echo "✅ All checks passed!"
