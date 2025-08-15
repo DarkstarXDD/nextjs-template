@@ -1,13 +1,13 @@
-echo "🚧 Running ESLint..."
+echo -e "\e[33m🚧 Running ESLint...\e[0m"
 npx eslint
-echo "🟢 ESLint passed"
+echo -e "\e[32m🟢 ESLint passed\e[0m"
 
 echo
 
-echo "🚧 Running TypeScript check..."
+echo -e "\e[33m🚧 Running TypeScript check...\e[0m"
 npm run type-check
-echo "🟢 TypeScript check passed"
+echo -e "\e[32m🟢 TypeScript check passed\e[0m"
 
 echo
 
-echo "✅ All checks passed!"
+echo -e "\e[32m✅ All checks passed!\e[0m"
