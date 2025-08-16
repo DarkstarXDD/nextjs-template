@@ -1,5 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", ":pinVersions"],
-  "baseBranchPatterns": ["renovate-updates"]
+  "packageRules": [
+    {
+      "groupName": "runtime deps (minor/patch)",
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "dev deps (minor/patch)",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ]
 }
