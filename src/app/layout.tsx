@@ -1,38 +1,34 @@
-import { type Metadata } from "next"
 import { Inter } from "next/font/google"
+import { type Metadata } from "next"
 
 import "@/styles/globals.css"
 
 export const metadata: Metadata = {
-  title: "[Title]",
-  description:
-    "Check out Darkstar's solution for the {challenge name} challenge on Frontend Mentor",
-
-  authors: {
-    name: "Darkstar",
-    url: "https://github.com/DarkstarXDD",
-  },
-
   openGraph: {
-    type: "website",
-    url: "https://challenge-name-darkstarxdd.vercel.app/",
-    title: "devfinder",
-
-    description:
-      "Check out Darkstar's solution for the {challenge name} challenge on Frontend Mentor",
-
     images: {
-      url: "https://challenge-name-darkstarxdd.vercel.app/og-img.jpeg",
+      url: "https://project-name-darkstar.vercel.app/og-img.jpeg",
       type: "image/jpeg",
       width: 1440,
-      height: 756,
+      height: 630,
     },
+    url: "https://project-name-darkstar.vercel.app/",
+    description: "Project description",
+    title: "Project Title",
+    type: "website",
   },
+
+  authors: {
+    url: "https://github.com/DarkstarXDD",
+    name: "Darkstar",
+  },
+
+  description: "Project description",
+  title: "Project Title",
 }
 
 const inter = Inter({
-  subsets: ["latin"],
   variable: "--font-inter",
+  subsets: ["latin"],
 })
 
 export default function RootLayout({

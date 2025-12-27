@@ -1,42 +1,25 @@
+import nextVitals from "eslint-config-next/core-web-vitals"
+import perfectionist from "eslint-plugin-perfectionist"
+import { includeIgnoreFile } from "@eslint/compat"
+import nextTs from "eslint-config-next/typescript"
+import { defineConfig } from "eslint/config"
 import { fileURLToPath } from "url"
 
-import { includeIgnoreFile } from "@eslint/compat"
-import { defineConfig } from "eslint/config"
-import nextVitals from "eslint-config-next/core-web-vitals"
-import nextTs from "eslint-config-next/typescript"
-import eslintPluginImport from "eslint-plugin-import"
 
 const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url))
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+  // perfectionist.configs["recommended-alphabetical"],
+  perfectionist.configs["recommended-line-length"],
   {
-    plugins: {
-      import: eslintPluginImport,
-    },
     rules: {
-      "import/order": [
-        "error",
-        {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object",
-            "type",
-          ],
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
-        },
-      ],
-      "import/first": "error",
-      "import/no-duplicates": "error",
-      "import/newline-after-import": "error",
       "react-hooks/incompatible-library": "off",
+      "perfectionist/sort-modules": "off",
+      "import/no-duplicates": "error",
+      "import/first": "error",
     },
   },
   includeIgnoreFile(gitignorePath),
